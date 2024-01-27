@@ -30,7 +30,10 @@ void Setup() {
     score = 0;
 }
 void Draw() {
-    system("cls");
+    COORD cursorPosition;
+    cursorPosition.X = 0;
+    cursorPosition.Y = 0;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cursorPosition);
     for (int i = 0; i < width + 1; i++)
     {
         std::cout << "#";
